@@ -6,18 +6,18 @@ make "ch heading
 leafp :size
 penup
 left 90
-fd 0.15 * :size
+forward 0.15 * :size
 left 65
-fd 0.15 * 0.6 * :size
+forward 0.15 * 0.6 * :size
 right 90
 leafp :size * 0.6
 penup
 setpos :cp
 setheading :ch
 right 90
-fd 0.15 * :size
+forward 0.15 * :size
 right 65
-fd 0.15 * 0.6 * :size
+forward 0.15 * 0.6 * :size
 left 90
 leafp :size * 0.6
 setpos :cp
@@ -30,21 +30,21 @@ left 90
 forward 0.15 * :size
 pendown
 right 70
-FORWARD 0.66 * :size
+forward 0.66 * :size
 right 65
 forward 0.52 * :size
 penup
 right 45 + 90
-fd :size
+forward :size
 left 90
 forward 0.15 * :size
 pendown
 left 70
-fd 0.66 * :size
+forward 0.66 * :size
 left 65
-fd 0.52 * :size
+forward 0.52 * :size
 penup
 left 45 + 90
-fd :size
+forward :size
 left 180
 END
