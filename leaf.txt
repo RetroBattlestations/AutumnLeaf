@@ -1,0 +1,50 @@
+TO leaf :size
+local "cp
+local "ch
+make "cp pos
+make "ch heading
+leafp :size
+penup
+left 90
+fd 0.15 * :size
+left 65
+fd 0.15 * 0.6 * :size
+right 90
+leafp :size * 0.6
+penup
+setpos :cp
+setheading :ch
+right 90
+fd 0.15 * :size
+right 65
+fd 0.15 * 0.6 * :size
+left 90
+leafp :size * 0.6
+setpos :cp
+setheading :ch
+END
+
+TO leafp :size
+penup
+left 90
+forward 0.15 * :size
+pendown
+right 70
+FORWARD 0.66 * :size
+right 65
+forward 0.52 * :size
+penup
+right 45 + 90
+fd :size
+left 90
+forward 0.15 * :size
+pendown
+left 70
+fd 0.66 * :size
+left 65
+fd 0.52 * :size
+penup
+left 45 + 90
+fd :size
+left 180
+END
