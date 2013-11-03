@@ -1,0 +1,60 @@
+to pos
+op piece 1 2 tf 
+end
+to heading
+op item 3 tf
+end
+to leaf :size
+local "cp
+local "ch
+make "cp pos
+make "ch heading
+leafp :size
+pu
+lt 90
+fd 0.15 * :size
+lt 65
+fd 0.15 * 0.6 * :size
+rt 90
+leafp :size * 0.6
+pu
+setpos :cp
+seth :ch
+rt 90
+fd 0.15 * :size
+rt 65
+fd 0.15 * 0.6 * :size
+lt 90
+leafp :size * 0.6
+setpos :cp
+seth :ch
+end
+to leafp :size
+pu
+lt 90
+fd 0.15 * :size
+pd
+rt 70
+fd 0.66 * :size
+rt 65
+fd 0.52 * :size
+pu
+rt 45 + 90
+fd :size
+lt 90
+fd 0.15 * :size
+pd
+lt 70
+fd 0.66 * :size
+lt 65
+fd 0.52 * :size
+pu
+lt 45 + 90
+fd :size
+lt 180
+end
+to reddit3
+cs
+ct
+leaf 180
+end
