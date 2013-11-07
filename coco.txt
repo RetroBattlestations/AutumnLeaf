@@ -1,0 +1,49 @@
+TO movesub :size :dir
+forward (15 * :size / 100)
+setheading heading me - 65 * :dir
+forward (15 * :size / 100 * 60 / 100)
+setheading heading me + 90 * :dir
+END
+
+TO leaf :size
+leafp :size
+penup
+left 90
+movesub :size 1
+leafp (:size * 60 / 100)
+penup
+right 65 + 90
+movesub :size 1
+left 25
+movesub :size -1
+leafp (:size * 60 / 100)
+penup
+left 65 + 90
+movesub :size -1
+right 25 + 90
+END
+
+TO leafp :size
+penup
+left 90
+forward (15 * :size / 100)
+pendown
+right 70
+forward (66 * :size / 100)
+right 65
+forward (52 * :size / 100)
+penup
+right 45 + 90
+forward :size
+left 90
+forward (15 * :size / 100)
+pendown
+left 70
+forward (66 * :size / 100)
+left 65
+forward (52 * :size / 100)
+penup
+left 45 + 90
+forward :size
+left 180
+END
